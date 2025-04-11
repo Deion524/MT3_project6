@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Vector3Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:Vector3Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:Matrix4x4Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Vector3Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:Vector3Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:Matrix4x4Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Vector3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:Vector3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:Matrix4x4.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,10 +36,49 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\main.cpp*",
               "RelativeToolTip": "main.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-11T22:27:42.794Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Matrix4x4Functions.cpp",
+              "DocumentMoniker": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.cpp",
+              "RelativeDocumentMoniker": "Matrix4x4Functions.cpp",
+              "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.cpp",
+              "RelativeToolTip": "Matrix4x4Functions.cpp",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAgwP0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-11T22:43:10.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Matrix4x4Functions.h",
+              "DocumentMoniker": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.h",
+              "RelativeDocumentMoniker": "Matrix4x4Functions.h",
+              "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.h",
+              "RelativeToolTip": "Matrix4x4Functions.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-11T22:42:50.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Matrix4x4.h",
+              "DocumentMoniker": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4.h",
+              "RelativeDocumentMoniker": "Matrix4x4.h",
+              "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4.h",
+              "RelativeToolTip": "Matrix4x4.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-11T22:42:29.928Z",
               "EditorCaption": ""
             },
             {
@@ -49,43 +88,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Vector3Functions.cpp",
-              "DocumentMoniker": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Vector3Functions.cpp",
-              "RelativeDocumentMoniker": "Vector3Functions.cpp",
-              "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Vector3Functions.cpp",
-              "RelativeToolTip": "Vector3Functions.cpp",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAswHAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-11T22:37:32.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Vector3Functions.h",
-              "DocumentMoniker": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Vector3Functions.h",
-              "RelativeDocumentMoniker": "Vector3Functions.h",
-              "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Vector3Functions.h",
-              "RelativeToolTip": "Vector3Functions.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-11T22:37:29.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Vector3.h",
-              "DocumentMoniker": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Vector3.h",
-              "RelativeDocumentMoniker": "Vector3.h",
-              "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Vector3.h",
-              "RelativeToolTip": "Vector3.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-11T22:36:51.994Z"
             }
           ]
         }

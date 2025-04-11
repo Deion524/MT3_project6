@@ -14,6 +14,12 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vector3">
+      <UniqueIdentifier>{41fc8f8f-f24d-4707-9f26-ccc4d617bef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Matrix4x4">
+      <UniqueIdentifier>{05d918aa-ad9d-46b6-a063-67ffce1826b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -21,7 +27,10 @@
       <Filter>KamataEngine\Adapter</Filter>
     </ClCompile>
     <ClCompile Include="Vector3Functions.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>Vector3</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix4x4Functions.cpp">
+      <Filter>Matrix4x4</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -106,7 +115,17 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
-    <ClInclude Include="Vector3.h" />
-    <ClInclude Include="Vector3Functions.h" />
+    <ClInclude Include="Vector3.h">
+      <Filter>Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3Functions.h">
+      <Filter>Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix4x4.h">
+      <Filter>Matrix4x4</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix4x4Functions.h">
+      <Filter>Matrix4x4</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
