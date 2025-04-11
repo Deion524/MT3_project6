@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:Matrix4x4Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:Matrix4x4Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|solutionrelative:Matrix4x4Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{397CBD8E-B81E-4E5C-A117-5DED329E433D}|MT3_project6.vcxproj|C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwFEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-11T22:27:42.794Z",
               "IsPinned": true,
@@ -52,26 +52,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Matrix4x4Functions.cpp",
               "DocumentMoniker": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.cpp",
               "RelativeDocumentMoniker": "Matrix4x4Functions.cpp",
               "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.cpp",
               "RelativeToolTip": "Matrix4x4Functions.cpp",
-              "ViewState": "AgIAAC8BAAAAAAAAAAAwwEoBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAIMBAAAAAAAAAAAgwJ8BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-11T22:43:10.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Matrix4x4Functions.h",
               "DocumentMoniker": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.h",
               "RelativeDocumentMoniker": "Matrix4x4Functions.h",
               "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\Matrix4x4Functions.h",
               "RelativeToolTip": "Matrix4x4Functions.h",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-11T22:42:50.777Z",
               "EditorCaption": ""

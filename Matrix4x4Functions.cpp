@@ -2,6 +2,7 @@
 
 #include <Novice.h>
 #include <assert.h>
+#include <cmath>
 
 /*==============================================
 				コンストラクタ
@@ -313,6 +314,90 @@ Vector3 Matrix4x4Functions::Transform(const Vector3& vector, const Matrix4x4& ma
 	result.x /= w;
 	result.y /= w;
 	result.z /= w;
+
+	// 返却する値
+	return result;
+}
+
+/*==============================================
+					X軸回転行列
+==============================================*/
+Matrix4x4 Matrix4x4Functions::MakeRotateXMatrix(float radian) {
+	// 戻り値
+	Matrix4x4 result;
+
+	// 行列の中身を初期化
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			result.m[i][j] = 0.0f;
+		}
+	}
+
+	// 回転行列の作成
+	result.m[0][0] = 1.0f;
+	result.m[3][3] = 1.0f;
+
+	result.m[1][1] = cosf(radian);
+	result.m[2][1] = -sinf(radian);
+
+	result.m[1][2] = sinf(radian);
+	result.m[2][2] = cosf(radian);
+
+	// 返却する値
+	return result;
+}
+
+/*==============================================
+					Y軸回転行列
+==============================================*/
+Matrix4x4 Matrix4x4Functions::MakeRotateYMatrix(float radian) {
+	// 戻り値
+	Matrix4x4 result;
+
+	// 行列の中身を初期化
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			result.m[i][j] = 0.0f;
+		}
+	}
+
+	// 回転行列の作成
+	result.m[1][1] = 1.0f;
+	result.m[3][3] = 1.0f;
+
+	result.m[0][0] = cosf(radian);
+	result.m[2][0] = sinf(radian);
+
+	result.m[0][2] = -sinf(radian);
+	result.m[2][2] = cosf(radian);
+
+	// 返却する値
+	return result;
+}
+
+/*==============================================
+					Z軸回転行列
+==============================================*/
+Matrix4x4 Matrix4x4Functions::MakeRotateZMatrix(float radian) {
+	// 戻り値
+	Matrix4x4 result;
+
+	// 行列の中身を初期化
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			result.m[i][j] = 0.0f;
+		}
+	}
+
+	// 回転行列の作成
+	result.m[0][0] = cosf(radian);
+	result.m[0][1] = sinf(radian);
+
+	result.m[1][0] = -sinf(radian);
+	result.m[1][1] = cosf(radian);
+
+	result.m[2][2] = 1.0f;
+	result.m[3][3] = 1.0f;
 
 	// 返却する値
 	return result;

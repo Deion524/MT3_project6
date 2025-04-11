@@ -1,9 +1,8 @@
 #include <Novice.h>
 
 #include "Matrix4x4Functions.h"
-#include "Vector3Functions.h"
 
-const char kWindowTitle[] = "LC1A_09_ジェイムズディアンカイ_MT3_00_03";
+const char kWindowTitle[] = "LD2A_02_ジェイムズディアンカイ_MT3_00_04";
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
@@ -17,21 +16,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	//インスタンス生成
 	Matrix4x4Functions* matrix4x4Func = new Matrix4x4Functions();
-	Vector3Functions* vector3Func = new Vector3Functions();
 
 	// 変数と初期化
-	Vector3 translate = { 4.1f,2.6f,0.8f };
-	Vector3 scale = { 1.5f,5.2f,7.3f };
-	Matrix4x4 translateMatrix = matrix4x4Func->MakeTranslateMatrix(translate);
-	Matrix4x4 scaleMatrix = matrix4x4Func->MakeScaleMatrix(scale);
-	Vector3 point = { 2.3f,3.8f,1.4f };
-	Matrix4x4 tranformMatrix = {
-		1.0f,2.0f,3.0f,4.0f,
-		3.0f,1.0f,1.0f,2.0f,
-		1.0f,4.0f,2.0f,3.0f,
-		2.0f,2.0f,1.0f,3.0f
-	};
-	Vector3 transformed = matrix4x4Func->Transform(point, tranformMatrix);
+	Vector3 rotate = { 0.4f,1.43f,-0.8f };
+	Matrix4x4 rotateXMatrix = matrix4x4Func->MakeRotateXMatrix(rotate.x);
+	Matrix4x4 rotateYMatrix = matrix4x4Func->MakeRotateYMatrix(rotate.y);
+	Matrix4x4 rotateZMatrix = matrix4x4Func->MakeRotateZMatrix(rotate.z);
+	Matrix4x4 rotateXYZMatrix = matrix4x4Func->Multiply(rotateXMatrix, matrix4x4Func->Multiply(rotateYMatrix, rotateZMatrix));
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -54,9 +45,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓描画処理ここから
 		///
 
-		vector3Func->Vector3ScreenPrintf(0, 0, transformed, "transformed");
-		matrix4x4Func->MatrixScreenPrintf(0, 32, translateMatrix, "translateMatrix");
-		matrix4x4Func->MatrixScreenPrintf(0, 128, scaleMatrix, "scaleMatrix");
+		matrix4x4Func->MatrixScreenPrintf(0, 128 * 0, rotateXMatrix, "rotateXMatrix");
+		matrix4x4Func->MatrixScreenPrintf(0, 128 * 1, rotateYMatrix, "rotateYMatrix");
+		matrix4x4Func->MatrixScreenPrintf(0, 128 * 2, rotateZMatrix, "rotateZMatrix");
+		matrix4x4Func->MatrixScreenPrintf(0, 128 * 3, rotateXYZMatrix, "rotateXYZMatrix");
 
 		///
 		/// ↑描画処理ここまで
@@ -73,7 +65,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	// インスタンス削除
 	delete matrix4x4Func;
-	delete vector3Func;
 
 	// ライブラリの終了
 	Novice::Finalize();
