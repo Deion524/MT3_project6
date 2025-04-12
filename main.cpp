@@ -2,7 +2,7 @@
 
 #include "Matrix4x4Functions.h"
 
-const char kWindowTitle[] = "LD2A_02_ジェイムズディアンカイ_MT3_00_04";
+const char kWindowTitle[] = "LD2A_02_ジェイムズディアンカイ_MT3_00_05";
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
@@ -18,11 +18,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Matrix4x4Functions* matrix4x4Func = new Matrix4x4Functions();
 
 	// 変数と初期化
+	Vector3 scale = { 1.2f,0.79f,-2.1f };
 	Vector3 rotate = { 0.4f,1.43f,-0.8f };
-	Matrix4x4 rotateXMatrix = matrix4x4Func->MakeRotateXMatrix(rotate.x);
-	Matrix4x4 rotateYMatrix = matrix4x4Func->MakeRotateYMatrix(rotate.y);
-	Matrix4x4 rotateZMatrix = matrix4x4Func->MakeRotateZMatrix(rotate.z);
-	Matrix4x4 rotateXYZMatrix = matrix4x4Func->Multiply(rotateXMatrix, matrix4x4Func->Multiply(rotateYMatrix, rotateZMatrix));
+	Vector3 translate = { 2.7f,-4.15f,1.57f };
+	Matrix4x4 worldMatrix = matrix4x4Func->MakeAffineMatrix(scale, rotate, translate);
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -45,10 +44,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓描画処理ここから
 		///
 
-		matrix4x4Func->MatrixScreenPrintf(0, 128 * 0, rotateXMatrix, "rotateXMatrix");
-		matrix4x4Func->MatrixScreenPrintf(0, 128 * 1, rotateYMatrix, "rotateYMatrix");
-		matrix4x4Func->MatrixScreenPrintf(0, 128 * 2, rotateZMatrix, "rotateZMatrix");
-		matrix4x4Func->MatrixScreenPrintf(0, 128 * 3, rotateXYZMatrix, "rotateXYZMatrix");
+		matrix4x4Func->MatrixScreenPrintf(0, 0, worldMatrix, "worldMatrix");
 
 		///
 		/// ↑描画処理ここまで

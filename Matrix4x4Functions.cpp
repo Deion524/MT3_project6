@@ -404,6 +404,55 @@ Matrix4x4 Matrix4x4Functions::MakeRotateZMatrix(float radian) {
 }
 
 /*==============================================
+				3次元アフィン変換行列
+==============================================*/
+Matrix4x4 Matrix4x4Functions::MakeAffineMatrix(const Vector3& scale, const Vector3& rotate, const Vector3& translate) {
+	// 戻り値
+	Matrix4x4 scaleMatrix;
+	Matrix4x4 rotateXYMatrix;
+	Matrix4x4 rotateXZMatrix;
+	Matrix4x4 rotateYZMatrix;
+	Matrix4x4 rotateMatrix;
+	Matrix4x4 translateMatrix;
+	Matrix4x4 resultMatrix;
+
+	// 各行列の中身を初期化
+	//for (int i = 0; i < 4; ++i) {
+	//	for (int j = 0; j < 4; ++j) {
+	//		scaleMatrix.m[i][j] = 0.0f;
+	//		rotateXYMatrix.m[i][j] = 0.0f;
+	//		rotateXZMatrix.m[i][j] = 0.0f;
+	//		rotateYZMatrix.m[i][j] = 0.0f;
+	//		translateMatrix.m[i][j] = 0.0f;
+	//		resultMatrix.m[i][j] = 0.0f;
+	//	}
+	//}
+	// 行列の計算(拡縮)
+	scaleMatrix = MakeScaleMatrix(scale);
+
+	// 行列の計算(回転XY)
+	rotateXYMatrix = MakeRotateZMatrix(rotate.z);
+	// 行列の計算(回転XZ)
+	rotateXZMatrix = MakeRotateYMatrix(rotate.y);
+	// 行列の計算(回転YZ)
+	rotateYZMatrix = MakeRotateXMatrix(rotate.x);
+	// 回転行列の結合
+	rotateMatrix = Multiply(rotateXYMatrix, Multiply(rotateXZMatrix, rotateYZMatrix));
+
+	// 行列の計算(移動)
+	translateMatrix = MakeTranslateMatrix(translate);
+
+	// アフィン変換(拡縮、回転)
+	resultMatrix = Multiply(scaleMatrix, rotateMatrix);
+
+	// アフィン変換(+移動)
+	resultMatrix = Multiply(resultMatrix, translateMatrix);
+
+	// 返却する値
+	return resultMatrix;
+}
+
+/*==============================================
 					行列の描画
 ==============================================*/
 void Matrix4x4Functions::MatrixScreenPrintf(int x, int y, const Matrix4x4& m, const char* lavel) {
