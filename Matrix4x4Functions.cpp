@@ -427,17 +427,19 @@ Matrix4x4 Matrix4x4Functions::MakeAffineMatrix(const Vector3& scale, const Vecto
 	//		resultMatrix.m[i][j] = 0.0f;
 	//	}
 	//}
+
 	// 行列の計算(拡縮)
 	scaleMatrix = MakeScaleMatrix(scale);
 
-	// 行列の計算(回転XY)
-	rotateXYMatrix = MakeRotateZMatrix(rotate.z);
-	// 行列の計算(回転XZ)
-	rotateXZMatrix = MakeRotateYMatrix(rotate.y);
 	// 行列の計算(回転YZ)
 	rotateYZMatrix = MakeRotateXMatrix(rotate.x);
+	// 行列の計算(回転XZ)
+	rotateXZMatrix = MakeRotateYMatrix(rotate.y);
+	// 行列の計算(回転XY)
+	rotateXYMatrix = MakeRotateZMatrix(rotate.z);
+
 	// 回転行列の結合
-	rotateMatrix = Multiply(rotateXYMatrix, Multiply(rotateXZMatrix, rotateYZMatrix));
+	rotateMatrix = Multiply(rotateYZMatrix, Multiply(rotateXZMatrix, rotateXYMatrix));
 
 	// 行列の計算(移動)
 	translateMatrix = MakeTranslateMatrix(translate);
