@@ -416,18 +416,6 @@ Matrix4x4 Matrix4x4Functions::MakeAffineMatrix(const Vector3& scale, const Vecto
 	Matrix4x4 translateMatrix;
 	Matrix4x4 resultMatrix;
 
-	// 各行列の中身を初期化
-	//for (int i = 0; i < 4; ++i) {
-	//	for (int j = 0; j < 4; ++j) {
-	//		scaleMatrix.m[i][j] = 0.0f;
-	//		rotateXYMatrix.m[i][j] = 0.0f;
-	//		rotateXZMatrix.m[i][j] = 0.0f;
-	//		rotateYZMatrix.m[i][j] = 0.0f;
-	//		translateMatrix.m[i][j] = 0.0f;
-	//		resultMatrix.m[i][j] = 0.0f;
-	//	}
-	//}
-
 	// 行列の計算(拡縮)
 	scaleMatrix = MakeScaleMatrix(scale);
 
@@ -437,7 +425,6 @@ Matrix4x4 Matrix4x4Functions::MakeAffineMatrix(const Vector3& scale, const Vecto
 	rotateXZMatrix = MakeRotateYMatrix(rotate.y);
 	// 行列の計算(回転XY)
 	rotateXYMatrix = MakeRotateZMatrix(rotate.z);
-
 	// 回転行列の結合
 	rotateMatrix = Multiply(rotateYZMatrix, Multiply(rotateXZMatrix, rotateXYMatrix));
 
@@ -446,12 +433,87 @@ Matrix4x4 Matrix4x4Functions::MakeAffineMatrix(const Vector3& scale, const Vecto
 
 	// アフィン変換(拡縮、回転)
 	resultMatrix = Multiply(scaleMatrix, rotateMatrix);
-
 	// アフィン変換(+移動)
 	resultMatrix = Multiply(resultMatrix, translateMatrix);
 
 	// 返却する値
 	return resultMatrix;
+}
+
+/*==============================================
+					透視投影行列
+==============================================*/
+Matrix4x4 Matrix4x4Functions::MakePerspectiveFovMatrix(float fovY, float aspectRatio, float nearClip, float farClip) {
+	// 戻り値
+	Matrix4x4 result;
+
+	// 行列の中身を初期化
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			result.m[i][j] = 0.0f;
+		}
+	}
+	// 透視投影行列の作成
+	result.m[0][0] = (1.0f / aspectRatio) * (1.0f / (tanf(fovY / 2.0f)));
+	result.m[1][1] = 1.0f / (tanf(fovY / 2.0f));
+	result.m[2][2] = farClip / (farClip - nearClip);
+	result.m[2][3] = 1.0f;
+	result.m[3][2] = (-nearClip * farClip) / (farClip - nearClip);
+
+	// 返却する値
+	return result;
+}
+
+/*==============================================
+					正射影行列
+==============================================*/
+Matrix4x4 Matrix4x4Functions::MakeOrthographicMatrix(float left, float top, float right, float bottom, float nearClip, float farClip) {
+	// 戻り値
+	Matrix4x4 result;
+
+	// 中身の初期化
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			result.m[i][j] = 0.0f;
+		}
+	}
+	// 中身を代入
+	result.m[0][0] = 2.0f / (right - left);
+	result.m[1][1] = 2.0f / (top - bottom);
+	result.m[2][2] = 1.0f / (farClip - nearClip);
+	result.m[3][0] = (left + right) / (left - right);
+	result.m[3][1] = (top + bottom) / (bottom - top);
+	result.m[3][2] = nearClip / (nearClip - farClip);
+	result.m[3][3] = 1.0f;
+
+	// 返却する値
+	return result;
+}
+
+/*==============================================
+				ビューポート変換行列
+==============================================*/
+Matrix4x4 Matrix4x4Functions::MakeViewportMatrix(float left, float top, float width, float height, float minDepth, float maxDepth) {
+	// 戻り値
+	Matrix4x4 result;
+
+	// 中身の初期化
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			result.m[i][j] = 0.0f;
+		}
+	}
+	// 中身を代入
+	result.m[0][0] = width / 2.0f;
+	result.m[1][1] = -height / 2.0f;
+	result.m[2][2] = maxDepth - minDepth;
+	result.m[3][0] = left + width / 2.0f;
+	result.m[3][1] = top + height / 2.0f;
+	result.m[3][2] = minDepth;
+	result.m[3][3] = 1.0f;
+
+	// 返却する値
+	return result;
 }
 
 /*==============================================
@@ -461,7 +523,7 @@ void Matrix4x4Functions::MatrixScreenPrintf(int x, int y, const Matrix4x4& m, co
 	Novice::ScreenPrintf(x, y, "%s", lavel);
 	for (int i = 0; i < 4; ++i) {
 		for (int j = 0; j < 4; ++j) {
-			Novice::ScreenPrintf(x + 16 + 64 * j, y + 16 + 16 * i, "%0.2f", m.m[i][j]);
+			Novice::ScreenPrintf(x + 16 + 64 * j, y + 16 + 16 * i, "%6.2f", m.m[i][j]);
 		}
 	}
 }

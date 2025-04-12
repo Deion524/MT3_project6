@@ -18,10 +18,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Matrix4x4Functions* matrix4x4Func = new Matrix4x4Functions();
 
 	// 変数と初期化
-	Vector3 scale = { 1.2f,0.79f,-2.1f };
-	Vector3 rotate = { 0.4f,1.43f,-0.8f };
-	Vector3 translate = { 2.7f,-4.15f,1.57f };
-	Matrix4x4 worldMatrix = matrix4x4Func->MakeAffineMatrix(scale, rotate, translate);
+	Matrix4x4 orthographicMatrix = matrix4x4Func->MakeOrthographicMatrix(-160.0f, 160.0f, 200.0f, 300.0f, 0.0f, 1000.0f);
+	Matrix4x4 perspectiveFovMatrix = matrix4x4Func->MakePerspectiveFovMatrix(0.63f, 1.33f, 0.1f, 1000.0f);
+	Matrix4x4 viewportMatrix = matrix4x4Func->MakeViewportMatrix(100.0f, 200.0f, 600.0f, 300.0f, 0.0f, 1.0f);
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -44,7 +43,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓描画処理ここから
 		///
 
-		matrix4x4Func->MatrixScreenPrintf(0, 0, worldMatrix, "worldMatrix");
+		matrix4x4Func->MatrixScreenPrintf(0, 0, orthographicMatrix, "orthograhpMatrix");
+		matrix4x4Func->MatrixScreenPrintf(0, 128, perspectiveFovMatrix, "perspectiveFovMatrix");
+		matrix4x4Func->MatrixScreenPrintf(0,128*2, viewportMatrix, "viewportMatrix");
 
 		///
 		/// ↑描画処理ここまで
