@@ -74,6 +74,20 @@ float Vector3Functions::Dot(const Vector3& v1, const Vector3& v2)
 }
 
 /*============================================
+					内積
+============================================*/
+Vector3 Vector3Functions::Cross(const Vector3& v1, const Vector3& v2)
+{
+	Vector3 result;
+
+	result.x = v1.y * v2.z - v1.z * v2.y;
+	result.y = v1.z * v2.x - v1.x * v2.z;
+	result.z = v1.x * v2.y - v1.y * v2.x;
+
+	return result;
+}
+
+/*============================================
 					長さ
 ============================================*/
 float Vector3Functions::Length(const Vector3& v)
