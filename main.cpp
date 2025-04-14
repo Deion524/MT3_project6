@@ -42,9 +42,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	float kMoveSpeed = 2.0f;
 	Vector3 kLocalVertices[3];
 	Vector3 screenVertices[3];
-	kLocalVertices[0] = { translate.x,translate.y + triangleWidth / 2.0f,0.0f };
-	kLocalVertices[1] = { translate.x - triangleWidth / 2.0f,translate.y - triangleWidth / 2.0f,0.0f };
-	kLocalVertices[2] = { translate.x + triangleWidth / 2.0f,translate.y - triangleWidth / 2.0f,0.0f };
+	kLocalVertices[0] = { 0.0f, triangleWidth,0.0f };
+	kLocalVertices[1] = { -triangleWidth / 2.0f,-triangleWidth / 2.0f,0.0f };
+	kLocalVertices[2] = { triangleWidth / 2.0f,-triangleWidth / 2.0f,0.0f };
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -73,9 +73,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		}
 
 		// 三角形の頂点の計算
-		kLocalVertices[0] = { +0.0f, triangleWidth / 2.0f,0.0f };
-		kLocalVertices[1] = { - triangleWidth / 2.0f,- triangleWidth / 2.0f,0.0f };
-		kLocalVertices[2] = { + triangleWidth / 2.0f,- triangleWidth / 2.0f,0.0f };
+		kLocalVertices[0] = { 0.0f, triangleWidth,0.0f };
+		kLocalVertices[1] = { -triangleWidth / 2.0f,-triangleWidth / 2.0f,0.0f };
+		kLocalVertices[2] = { triangleWidth / 2.0f,-triangleWidth / 2.0f,0.0f };
 
 		rotate.y += 0.02f;
 

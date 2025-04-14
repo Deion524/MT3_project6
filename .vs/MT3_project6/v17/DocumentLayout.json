@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\k024g\\Lessos\\LD2A\\MT3\\MT3_Git6\\MT3_project6\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAE8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-11T22:27:42.794Z",
               "IsPinned": true,
@@ -56,7 +56,8 @@
               "RelativeToolTip": "Vector3Functions.h",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T06:01:21.407Z"
+              "WhenOpened": "2025-04-12T06:01:21.407Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -68,7 +69,8 @@
               "RelativeToolTip": "Vector3Functions.cpp",
               "ViewState": "AgIAAEIAAAAAAAAAAAAgwFIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-12T06:01:21.916Z"
+              "WhenOpened": "2025-04-12T06:01:21.916Z",
+              "EditorCaption": ""
             }
           ]
         }
